@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "./UI/Button/Button";
 
-export const PostItem = ({ data, removePost, ...props }) => {
+const PostItem = ({ data, removePost, ...props }) => {
 
   return (
     <div
@@ -28,3 +28,5 @@ export const PostItem = ({ data, removePost, ...props }) => {
     </div>
   );
 };
+
+export default PostItem;

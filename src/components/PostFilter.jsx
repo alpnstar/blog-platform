@@ -1,8 +1,8 @@
 import React from 'react';
-import { Select } from './UI/Select/Select';
+import  Select  from './UI/Select/Select';
 import Input from './UI/Input/Input';
 
-export const PostFilter = ({ filter, setFilter, sortPosts }) => {
+const PostFilter = ({ filter, setFilter, sortPosts }) => {
 
     return (
         <div className='post-filter'>
@@ -26,3 +26,4 @@ export const PostFilter = ({ filter, setFilter, sortPosts }) => {
         </div>
     )
 }
+export default PostFilter;

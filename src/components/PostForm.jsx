@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Input from './UI/Input/Input';
 import Button from './UI/Button/Button';
 
-export const PostForm = ({ createPost }) => {
+const PostForm = ({ createPost }) => {
     const [postOption, setPostOption] = useState({
         title: '1',
         description: '2',
@@ -41,3 +41,4 @@ export const PostForm = ({ createPost }) => {
 
     )
 }
+export default PostForm;
