@@ -1,0 +1,8 @@
+.myButton {
+  color: teal;
+  background: transparent;
+
+  border: 1px teal solid;
+  padding: 3px 5px;
+  border-radius: 3px;
+}
