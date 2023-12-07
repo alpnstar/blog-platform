@@ -13,14 +13,6 @@ import Loader from "./components/UI/Loader/Loader";
 import useFetching from "./hooks/useFetching";
 
 const App = () => {
-  //  //* Логика пагинации:
-  // создаем пустой массив состояния
-  // в этом массиве будут страницы в виде свойства
-  // в зависимости от общего кол-ва постов, определяется кол-во страниц формулой
-  // циклом проходимся по основному массиву постов и создаем свойства страниц,
-  // при добавлении поста локально на стороне клиента, закидываем этот пост на последнюю страницу
-  //
-
   const [totalServerPosts, setTotalServerPosts] = useState(0);
   const [totalLocalPosts, setTotalLocalPosts] = useState(0);
   const [maxPageCount, setMaxPageCount] = useState(1);
@@ -29,7 +21,7 @@ const App = () => {
     [totalServerPosts, totalLocalPosts]
   );
   const [posts, setPosts] = useState({});
-  const [postsPage, setPostsPage] = useState(1);
+  const [postsPage, setPostsPage] = useState(10);
   const [filter, setFilter] = useState({
     selectedSort: "",
     searchQuery: "",
@@ -81,7 +73,15 @@ const App = () => {
     setFormModalVisibility(false);
   }
   function removePost(post) {
-    setPosts(currentPostsList.filter((item) => item.id !== post.id));
+    const data = posts[postsPage].filter((item) => item.id !== post.id);
+    setPosts(prev => {
+      return {
+        ...prev,
+        [postsPage]: [
+          ...data,
+        ]
+      }
+    })
   }
 
   return (
@@ -102,15 +102,15 @@ const App = () => {
         ((postsLoading && <Loader />) || (postsError && <h1>Error</h1>) || (
           <h1>Посты не найдены</h1>
         ))) || (
-        <div>
-          <PostPage
-            page={postsPage}
-            setPage={setPostsPage}
-            max={maxPageCount}
-          />
-          <PostList posts={sortedAndSearchedPosts} removePost={removePost} />
-        </div>
-      )}
+          <div>
+            <PostPage
+              page={postsPage}
+              setPage={setPostsPage}
+              max={maxPageCount}
+            />
+            <PostList posts={sortedAndSearchedPosts} removePost={removePost} />
+          </div>
+        )}
     </div>
   );
 };

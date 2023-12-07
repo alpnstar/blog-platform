@@ -5,7 +5,7 @@ import Button from './UI/Button/Button';
 const PostForm = ({ createPost }) => {
     const [postOption, setPostOption] = useState({
         title: '1',
-        description: '2',
+        body: '2',
     })
     function addPost(e) {
         e.preventDefault();
@@ -13,7 +13,7 @@ const PostForm = ({ createPost }) => {
         setPostOption({
             ...postOption,
             title: '',
-            description: ''
+            body: ''
         })
     }
     return (
@@ -31,9 +31,9 @@ const PostForm = ({ createPost }) => {
         <input ref={inputRef} type="text" /> */}
 
             <Input
-                value={postOption.description}
+                value={postOption.body}
                 onChange={e => {
-                    setPostOption({ ...postOption, description: e.target.value });
+                    setPostOption({ ...postOption, body: e.target.value });
                 }}
                 placeholder='Описание поста' />
             <Button onClick={addPost}>Добавить</Button>
