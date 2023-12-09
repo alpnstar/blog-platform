@@ -19,7 +19,7 @@ const PostItem = ({ data, removePost, ...props }) => {
     >
       <div className="posts__post-content">
         <h3>{data.title}</h3>
-        <p>{props.itemKey}</p>
+        <p>{data.id}</p>
         <p>{data.body}</p>
       </div>
       <div className="post__button">

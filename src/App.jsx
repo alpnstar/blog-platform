@@ -12,10 +12,11 @@ import Loader from "./components/UI/Loader/Loader";
 import useFetching from "./hooks/useFetching";
 
 const App = () => {
+  const [posts, setPosts] = useState({});
   const [totalServerPosts, setTotalServerPosts] = useState(0);
   const [totalLocalPosts, setTotalLocalPosts] = useState(0);
+  const [totalPosts, setTotalPosts] = useState(0);
   const [maxPageCount, setMaxPageCount] = useState(1);
-  const [posts, setPosts] = useState({});
   const [postsPage, setPostsPage] = useState(10);
   const [filter, setFilter] = useState({
     selectedSort: "",
@@ -43,7 +44,9 @@ const App = () => {
     });
     setTotalServerPosts(+resp.headers["x-total-count"]);
   });
-
+  useEffect(() => {
+    setTotalPosts(totalServerPosts + totalLocalPosts);
+  }, [totalServerPosts, totalLocalPosts]);
   useEffect(
     () => setMaxPageCount(Math.ceil((totalServerPosts + totalLocalPosts) / 10)),
     [totalServerPosts, totalLocalPosts]
@@ -67,18 +70,22 @@ const App = () => {
   function sortPosts(sort) {
     setFilter({ ...filter, selectedSort: sort });
   }
-
   function createPost(newPost) {
+    function handleAddTotalPosts() {
+      setTotalPosts(prev => prev + 1);
+      return totalPosts + 1;
+    }
     setPosts((prev) => {
       const check = Array.isArray(prev[maxPageCount]) ? [...prev[maxPageCount]] : [];
       return {
         ...prev,
-        [maxPageCount]: [...check, newPost],
+        [maxPageCount]: [...check, {id: handleAddTotalPosts(), ...newPost}],
       };
     });
     setFormModalVisibility(false);
   }
   function removePost(post) {
+    setTotalPosts(prev => prev - 1);
     const data = posts[postsPage].filter((item) => item.id !== post.id);
     setPosts(prev => {
       return {
@@ -98,7 +105,7 @@ const App = () => {
         visibility={formModalVisibility}
         setVisibility={setFormModalVisibility}
       >
-        <PostForm createPost={createPost} />
+        <PostForm createPost={createPost} totalPosts={totalPosts} setTotalPosts={setTotalPosts}/>
       </Modal>
       <hr style={{ margin: "5px 0" }} />
       <PostFilter filter={filter} setFilter={setFilter} sortPosts={sortPosts} />

@@ -3,8 +3,6 @@ import "./PostItem";
 import PostItem from "./PostItem";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
-
-
 const PostList = ({ posts, removePost }) => {
   return (
     <div
