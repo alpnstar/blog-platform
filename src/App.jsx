@@ -1,12 +1,11 @@
-import { useEffect, useState } from "react";
-import React from "react";
+import React, {useEffect, useState} from "react";
 import PostList from "./components/PostList";
 import "./scss/style.scss";
 import PostForm from "./components/PostForm";
 import PostFilter from "./components/PostFilter";
 import Modal from "./components/UI/Modal/Modal";
 import Button from "./components/UI/Button/Button";
-import { usePosts } from "./hooks/usePosts";
+import {usePosts} from "./hooks/usePosts";
 import PostService from "./API/PostService";
 import PostPage from "./components/PostPage";
 import Loader from "./components/UI/Loader/Loader";
@@ -16,10 +15,6 @@ const App = () => {
   const [totalServerPosts, setTotalServerPosts] = useState(0);
   const [totalLocalPosts, setTotalLocalPosts] = useState(0);
   const [maxPageCount, setMaxPageCount] = useState(1);
-  useEffect(
-    () => setMaxPageCount(Math.ceil((totalServerPosts + totalLocalPosts) / 10)),
-    [totalServerPosts, totalLocalPosts]
-  );
   const [posts, setPosts] = useState({});
   const [postsPage, setPostsPage] = useState(10);
   const [filter, setFilter] = useState({
@@ -27,15 +22,35 @@ const App = () => {
     searchQuery: "",
   });
   const pageCheck = posts[postsPage] || [];
-  const currentPostsList = pageCheck;
   const sortedAndSearchedPosts = usePosts(
-    pageCheck,
-    filter.selectedSort,
-    filter.searchQuery
+      pageCheck,
+      filter.selectedSort,
+      filter.searchQuery
   );
   const [formModalVisibility, setFormModalVisibility] = useState(false);
+  const [fetchPosts, postsLoading, postsError] = useFetching(async () => {
+    const resp = await PostService.getAll(10, postsPage);
+    const data = await resp.data;
+    setPosts((prev) => {
+      const check = Array.isArray(prev[postsPage]) ? [...prev[postsPage]] : [];
+      return {
+        ...prev,
+        [postsPage]: [
+          ...check,
+          ...data,
+        ],
+      };
+    });
+    setTotalServerPosts(+resp.headers["x-total-count"]);
+  });
+
+  useEffect(
+    () => setMaxPageCount(Math.ceil((totalServerPosts + totalLocalPosts) / 10)),
+    [totalServerPosts, totalLocalPosts]
+  );
+
   useEffect(() => {
-    for (let i = 1; i <= 10; i++) {
+    for (let i = 1; i < maxPageCount; i++) {
       setPosts((prev) => {
         return {
           ...prev,
@@ -43,18 +58,8 @@ const App = () => {
         };
       });
     }
-  }, []);
-  const [fetchPosts, postsLoading, postsError] = useFetching(async () => {
-    const resp = await PostService.getAll(10, postsPage);
-    const data = await resp.data;
-    setPosts((prev) => {
-      return {
-        ...prev,
-        [postsPage]: [...prev[postsPage], ...data],
-      };
-    });
-    setTotalServerPosts(+resp.headers["x-total-count"]);
-  });
+  }, [maxPageCount]);
+
   useEffect(() => {
     fetchPosts();
   }, [postsPage]);
@@ -65,9 +70,10 @@ const App = () => {
 
   function createPost(newPost) {
     setPosts((prev) => {
+      const check = Array.isArray(prev[maxPageCount]) ? [...prev[maxPageCount]] : [];
       return {
         ...prev,
-        [maxPageCount]: [...prev[maxPageCount], newPost],
+        [maxPageCount]: [...check, newPost],
       };
     });
     setFormModalVisibility(false);
@@ -76,7 +82,6 @@ const App = () => {
     const data = posts[postsPage].filter((item) => item.id !== post.id);
     setPosts(prev => {
       return {
-        ...prev,
         [postsPage]: [
           ...data,
         ]
@@ -98,7 +103,7 @@ const App = () => {
       <hr style={{ margin: "5px 0" }} />
       <PostFilter filter={filter} setFilter={setFilter} sortPosts={sortPosts} />
       <hr style={{ margin: "5px 0" }} />
-      {((sortedAndSearchedPosts.length == 0 || !sortedAndSearchedPosts) &&
+      {((sortedAndSearchedPosts.length === 0 || !sortedAndSearchedPosts) &&
         ((postsLoading && <Loader />) || (postsError && <h1>Error</h1>) || (
           <h1>Посты не найдены</h1>
         ))) || (
