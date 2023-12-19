@@ -11,6 +11,9 @@
       <change beforePath="$PROJECT_DIR$/src/components/PostForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostForm.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/PostItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostItem.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/PostList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PostPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostPagination.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useFetching.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useFetching.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/usePosts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/usePosts.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +55,11 @@
     "npm.start.executor": "Run",
     "settings.editor.selected.configurable": "inlay.hints",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "SCSS"
+    ]
   }
 }]]></component>
   <component name="ReactDesignerToolWindowState">
@@ -109,6 +117,13 @@
       <workItem from="1702134227176" duration="6000" />
       <workItem from="1702142903913" duration="2086000" />
       <workItem from="1702145371884" duration="6429000" />
+      <workItem from="1702222355166" duration="7082000" />
+      <workItem from="1702571941539" duration="49000" />
+      <workItem from="1702572011339" duration="1000" />
+      <workItem from="1702654646394" duration="4005000" />
+      <workItem from="1702743739801" duration="2053000" />
+      <workItem from="1702822543597" duration="8160000" />
+      <workItem from="1702852435745" duration="14458000" />
     </task>
     <servers />
   </component>

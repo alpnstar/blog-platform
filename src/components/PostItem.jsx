@@ -1,8 +1,7 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import Button from "./UI/Button/Button";
 
-const PostItem = ({ data, removePost, ...props }) => {
-
+const PostItem = ({data, removePost, index}) => {
   return (
     <div
       style={{
@@ -19,7 +18,7 @@ const PostItem = ({ data, removePost, ...props }) => {
     >
       <div className="posts__post-content">
         <h3>{data.title}</h3>
-        <p>{data.id}</p>
+          <p>{index}</p>
         <p>{data.body}</p>
       </div>
       <div className="post__button">

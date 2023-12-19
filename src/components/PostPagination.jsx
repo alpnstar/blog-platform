@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from './UI/Button/Button';
 
-const PostPage = ({ page, setPage, max }) => {
+const PostPagination = ({ page, setPage, max }) => {
     return (
         <div style={{ textAlign: 'center' }}>
             <div>
@@ -17,4 +17,4 @@ const PostPage = ({ page, setPage, max }) => {
     )
 }
 
-export default PostPage
+export default PostPagination
