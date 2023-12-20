@@ -7,8 +7,6 @@
     <list default="true" id="fcd0c56e-02a6-434a-ace3-b0955b1fbd59" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PostFilter.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostFilter.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/usePosts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/usePosts.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +117,7 @@
       <workItem from="1702743739801" duration="2053000" />
       <workItem from="1702822543597" duration="8160000" />
       <workItem from="1702852435745" duration="15174000" />
-      <workItem from="1703086538454" duration="2847000" />
+      <workItem from="1703086538454" duration="3995000" />
     </task>
     <servers />
   </component>

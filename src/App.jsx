@@ -29,8 +29,10 @@ const App = () => {
       filter.selectedSort,
       filter.searchQuery
   );
+  const [loadedPages, setLoadedPages] = useState(0);
   const [formModalVisibility, setFormModalVisibility] = useState(false);
   const [fetchPosts, postsLoading, postsError] = useFetching(async () => {
+    if (postsPage > loadedPages) {
       const resp = await PostService.getAll(10, postsPage);
       const data = await resp.data;
       setPosts((prev) => {
@@ -46,8 +48,9 @@ const App = () => {
         };
       });
       setTotalServerPosts(+resp.headers["x-total-count"]);
+      setLoadedPages(loadedPages + 1);
+    }
   });
-
   useEffect(() => {
     setMaxPageCount(Math.ceil((totalServerPosts + totalLocalPosts) / 10));
     setTotalPosts(totalServerPosts + totalLocalPosts);
