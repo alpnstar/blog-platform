@@ -5,14 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fcd0c56e-02a6-434a-ace3-b0955b1fbd59" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/UI/NavBar/NavBar.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UI/NavBar/navBar.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/About.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Posts.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Error.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/NavBar/NavBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/NavBar/NavBar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/NavBar/navBar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/NavBar/navBar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/About.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/About.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/reset.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/reset.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +46,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
+    "javascript.nodejs.core.library.configured.version": "20.9.0",
+    "javascript.nodejs.core.library.typings.version": "20.9.5",
     "last_opened_file_path": "C:/Users/stadg/OneDrive/Рабочий стол/Рабочий стол/ulbi-react-project",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -125,7 +128,7 @@
       <workItem from="1702743739801" duration="2053000" />
       <workItem from="1702822543597" duration="8160000" />
       <workItem from="1702852435745" duration="15174000" />
-      <workItem from="1703086538454" duration="8672000" />
+      <workItem from="1703086538454" duration="11581000" />
     </task>
     <servers />
   </component>

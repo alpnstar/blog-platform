@@ -1,7 +1,8 @@
 @import "./mixins";
 @import "./vars";
-
+@import "../styles/reset.css";
 @import "../styles/fonts.css";
+@import "../components/UI/NavBar/navBar";
 
 body,
 html,

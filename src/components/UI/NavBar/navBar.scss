@@ -1,5 +1,21 @@
 .nav-bar {
-  &__wrapper {
+  background: lightgray;
+  padding: 10px 20px;
 
+  &__wrapper {
+    ul {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+    li {
+      list-style: none;
+      border-bottom: 1px transparent solid;
+      &:hover {
+        cursor: pointer;
+        color: gray;
+        border-color: gray;
+      }
+    }
   }
 }
