@@ -81,6 +81,7 @@ const App = () => {
     const data = posts[postsPage].filter((item) => item.id !== post.id);
     setPosts(prev => {
       return {
+        ...prev,
         [postsPage]: [
           ...data,
         ]
