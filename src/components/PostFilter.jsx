@@ -18,7 +18,7 @@ const PostFilter = ({ filter, setFilter, sortPosts }) => {
                         name: 'По названию',
                     },
                     {
-                        value: 'description',
+                        value: 'body',
                         name: 'По описанию',
                     }
                 ]} />

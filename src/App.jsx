@@ -31,21 +31,21 @@ const App = () => {
   );
   const [formModalVisibility, setFormModalVisibility] = useState(false);
   const [fetchPosts, postsLoading, postsError] = useFetching(async () => {
-    if (!posts[postsPage] || posts[postsPage].length === 0) {
       const resp = await PostService.getAll(10, postsPage);
       const data = await resp.data;
       setPosts((prev) => {
+        const check = (posts[postsPage] && posts[postsPage].length !== 0
+                && [...posts[postsPage]])
+            || [...[]]
         return {
           ...prev,
           [postsPage]: [
             ...data,
+            ...check,
           ],
         };
       });
       setTotalServerPosts(+resp.headers["x-total-count"]);
-    } else {
-      return postsPage[postsPage]
-    }
   });
 
   useEffect(() => {
@@ -62,11 +62,13 @@ const App = () => {
   }
 
   function createPost(newPost) {
-    setPosts((prev) => {
-      const check = Array.isArray(prev[maxPageCount]) ? [...prev[maxPageCount]] : [];
+    setPosts(prev => {
+      const check = Array.isArray(prev[maxPageCount]) ? [...prev[maxPageCount]] : [...[]];
       return {
         ...prev,
-        [maxPageCount]: [...check, {...newPost}],
+        [maxPageCount]: [
+          ...check,
+          {...newPost, id: Date.now()}],
       };
     });
     setFormModalVisibility(false);
