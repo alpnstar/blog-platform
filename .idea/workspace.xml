@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fcd0c56e-02a6-434a-ace3-b0955b1fbd59" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Index.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,9 +47,9 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
-    "javascript.nodejs.core.library.configured.version": "20.9.0",
-    "javascript.nodejs.core.library.typings.version": "20.9.5",
-    "last_opened_file_path": "C:/Users/stadg/OneDrive/Рабочий стол/Рабочий стол/ulbi-react-project",
+    "javascript.nodejs.core.library.configured.version": "20.10.0",
+    "javascript.nodejs.core.library.typings.version": "20.10.5",
+    "last_opened_file_path": "C:/Users/stadg/OneDrive/Рабочий стол/ulbi-react-project",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -92,7 +90,7 @@
       <command value="npm run start" />
     </option>
   </component>
-  <component name="RunManager" selected="npm.start">
+  <component name="RunManager" selected="npm.bind">
     <configuration name="bind" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -145,11 +143,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.deploy" />
+        <item itemvalue="npm.bind" />
         <item itemvalue="npm.start" />
         <item itemvalue="npm.clear" />
-        <item itemvalue="npm.deploy" />
         <item itemvalue="npm.build-prod" />
-        <item itemvalue="npm.bind" />
       </list>
     </recent_temporary>
   </component>
@@ -183,7 +181,8 @@
       <workItem from="1703086538454" duration="18298000" />
       <workItem from="1703178891742" duration="3318000" />
       <workItem from="1703186683135" duration="9758000" />
-      <workItem from="1703342963581" duration="14001000" />
+      <workItem from="1703342963581" duration="16647000" />
+      <workItem from="1703493777607" duration="34000" />
     </task>
     <servers />
   </component>
