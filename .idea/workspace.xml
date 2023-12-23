@@ -137,9 +137,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.start" />
-        <item itemvalue="npm.bind" />
         <item itemvalue="npm.deploy" />
+        <item itemvalue="npm.bind" />
+        <item itemvalue="npm.start" />
         <item itemvalue="npm.build-prod" />
         <item itemvalue="JavaScript Debug.index.html" />
       </list>

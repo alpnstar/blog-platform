@@ -14,9 +14,9 @@ const App = () => {
         <div>
                 <NavBar/>
                 <Routes>
-                    <Route path="/" element={<About/>}/>
-                    <Route exact path="/posts" element={<Posts/>}/>
-                    <Route exact path="/posts/:id" element={<PostIdPage/>}/>
+                    <Route path={location.pathname + '/'} element={<About/>}/>
+                    <Route exact path={location.pathname + '/Posts'} element={<Posts/>}/>
+                    <Route exact path={location.pathname + '/Posts/:id'} element={<PostIdPage/>}/>
                     <Route path="/*" element={<Error/>}/>
                 </Routes>
         </div>
