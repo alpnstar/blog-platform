@@ -4,25 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fcd0c56e-02a6-434a-ace3-b0955b1fbd59" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/FetchStatus.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/PostCommentsItem.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/PostIdPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.browserslistrc" beforeDir="false" afterPath="$PROJECT_DIR$/.browserslistrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/API/PostService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/PostService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PostFilter.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostFilter.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PostItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostItem.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PostList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/NavBar/NavBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/NavBar/NavBar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/NavBar/navBar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/NavBar/navBar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Error.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Error.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Posts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Posts.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
-    </list>
+    <list default="true" id="fcd0c56e-02a6-434a-ace3-b0955b1fbd59" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -157,7 +139,7 @@
       <workItem from="1703086538454" duration="18298000" />
       <workItem from="1703178891742" duration="3318000" />
       <workItem from="1703186683135" duration="9758000" />
-      <workItem from="1703342963581" duration="5363000" />
+      <workItem from="1703342963581" duration="5717000" />
     </task>
     <servers />
   </component>
