@@ -7,6 +7,7 @@ import FetchStatus from "../components/FetchStatus";
 import PostCommentsItem from "../components/PostCommentsItem";
 
 const PostIdPage = () => {
+
     const param = useParams();
     const [post, setPost] = useState();
     const [postComments, setPostComments] = useState([]);
