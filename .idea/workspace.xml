@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fcd0c56e-02a6-434a-ace3-b0955b1fbd59" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/PostIdPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PostIdPage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,10 +135,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.deploy" />
-        <item itemvalue="npm.bind" />
-        <item itemvalue="npm.start" />
         <item itemvalue="npm.build-prod" />
+        <item itemvalue="npm.deploy" />
+        <item itemvalue="npm.start" />
+        <item itemvalue="npm.bind" />
         <item itemvalue="JavaScript Debug.index.html" />
       </list>
     </recent_temporary>
@@ -175,7 +173,7 @@
       <workItem from="1703086538454" duration="18298000" />
       <workItem from="1703178891742" duration="3318000" />
       <workItem from="1703186683135" duration="9758000" />
-      <workItem from="1703342963581" duration="7936000" />
+      <workItem from="1703342963581" duration="11090000" />
     </task>
     <servers />
   </component>
