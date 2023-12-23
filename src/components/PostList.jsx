@@ -10,7 +10,7 @@ const PostList = ({posts, removePost}) => {
         display: 'flex',
         flexDirection: 'column',
       }}
-      className="post__list">
+      className="posts">
       <TransitionGroup>
           {posts.map((item, index) => {
               return (

@@ -54,6 +54,13 @@ module.exports = {
                     MiniCssExtractPlugin.loader,
                     "css-loader",
                     "sass-loader",
+
+                ],
+            },
+            {
+
+                test: /\.css$/i,
+                use: [
                     {
                         loader: 'postcss-loader',
                         options: {
@@ -63,6 +70,7 @@ module.exports = {
                         }
                     },
                 ],
+
             },
             {
                 test: /\.(woff2?|ttf)$/,

@@ -5,20 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fcd0c56e-02a6-434a-ace3-b0955b1fbd59" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pages/Error.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/FetchStatus.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PostCommentsItem.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/PostIdPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.browserslistrc" beforeDir="false" afterPath="$PROJECT_DIR$/.browserslistrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/API/PostService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/PostService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PostFilter.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostFilter.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PostItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostItem.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PostList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostList.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/UI/NavBar/NavBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/NavBar/NavBar.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/UI/NavBar/navBar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/NavBar/navBar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/About.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/About.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Error.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Error.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Posts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Posts.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/reset.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/reset.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -41,7 +56,9 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "JavaScript Debug.index.html.executor": "Run",
     "Node.js.App.jsx.executor": "Run",
+    "ReactCreateComponentLastSelected": "arrowFunctionComponent",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
@@ -56,7 +73,7 @@
     "nodejs_package_manager_path": "npm",
     "npm.start.executor": "Run",
     "npm.uninstall.executor": "Run",
-    "settings.editor.selected.configurable": "inlay.hints",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "ts.external.directory.path": "C:\\Users\\stadg\\OneDrive\\Рабочий стол\\Рабочий стол\\ulbi-react-project\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   },
@@ -75,12 +92,20 @@
       </map>
     </option>
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\stadg\OneDrive\Рабочий стол\Рабочий стол\ulbi-react-project\src\components" />
+    </key>
+  </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="npm run start" />
     </option>
   </component>
   <component name="RunManager" selected="npm.start">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/ulbi-react-project/bundle/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="App.jsx" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/App.jsx" working-dir="$PROJECT_DIR$/src">
       <method v="2" />
     </configuration>
@@ -97,6 +122,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.start" />
+        <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="Node.js.App.jsx" />
       </list>
     </recent_temporary>
@@ -128,7 +154,10 @@
       <workItem from="1702743739801" duration="2053000" />
       <workItem from="1702822543597" duration="8160000" />
       <workItem from="1702852435745" duration="15174000" />
-      <workItem from="1703086538454" duration="11581000" />
+      <workItem from="1703086538454" duration="18298000" />
+      <workItem from="1703178891742" duration="3318000" />
+      <workItem from="1703186683135" duration="9758000" />
+      <workItem from="1703342963581" duration="5363000" />
     </task>
     <servers />
   </component>

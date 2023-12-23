@@ -7,14 +7,16 @@
       display: flex;
       justify-content: center;
       gap: 10px;
-    }
-    li {
-      list-style: none;
-      border-bottom: 1px transparent solid;
-      &:hover {
-        cursor: pointer;
-        color: gray;
-        border-color: gray;
+
+      li {
+        list-style: none;
+        border-bottom: 1px transparent solid;
+
+        &:hover {
+          cursor: pointer;
+          color: gray;
+          border-color: gray;
+        }
       }
     }
   }

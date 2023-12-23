@@ -2,7 +2,7 @@ import React from 'react';
 
 const Error = () => {
     return (
-        <div style={{
+        <div className='container' style={{
             width: 'fit-content',
             fontSize: '60px',
             color: 'teal',

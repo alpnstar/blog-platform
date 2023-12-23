@@ -1,23 +1,22 @@
-import "./scss/style.scss";
 import React from "react";
-import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
+import "./scss/style.scss";
+import {Route, Routes} from "react-router-dom";
 import NavBar from "./components/UI/NavBar/NavBar";
 import About from "./pages/About";
 import Posts from "./pages/Posts";
 import Error from "./pages/Error";
+import PostIdPage from "./pages/PostIdPage";
 
 const App = () => {
     return (
-        <div className='app'>
-            <BrowserRouter>
+        <div>
                 <NavBar/>
                 <Routes>
                     <Route path="/" element={<About/>}/>
-                    <Route path="/Posts" element={<Posts/>}/>
-                    <Route path="/Error" element={<Error/>}/>
+                    <Route exact path="/posts" element={<Posts/>}/>
+                    <Route exact path="/posts/:id" element={<PostIdPage/>}/>
                     <Route path="/*" element={<Error/>}/>
                 </Routes>
-            </BrowserRouter>
         </div>
     )
 }

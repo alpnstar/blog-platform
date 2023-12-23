@@ -6,7 +6,7 @@ const PostFilter = ({ filter, setFilter, sortPosts }) => {
 
     return (
         <div className='post-filter'>
-            <Input style={{ borderColor: 'teal' }} value={filter.searchQuery} onChange={event => {
+            <Input value={filter.searchQuery} onChange={event => {
                 setFilter({ ...filter, searchQuery: event.target.value });
             }} />
             <Select value={filter.selectedSort}

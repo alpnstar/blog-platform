@@ -1,6 +1,5 @@
 import React, {useEffect, useMemo, useState} from "react";
 import PostList from "../components/PostList";
-import "../scss/style.scss";
 import PostForm from "../components/PostForm";
 import PostFilter from "../components/PostFilter";
 import Modal from "../components/UI/Modal/Modal";
@@ -8,8 +7,8 @@ import Button from "../components/UI/Button/Button";
 import {usePosts} from "../hooks/usePosts";
 import PostService from "../API/PostService";
 import PostPagination from "../components/PostPagination";
-import Loader from "../components/UI/Loader/Loader";
 import useFetching from "../hooks/useFetching";
+import FetchStatus from "../components/FetchStatus";
 
 const Posts = () => {
     const [posts, setPosts] = useState({});
@@ -90,34 +89,30 @@ const Posts = () => {
     }
 
     return (
-        <div className="app">
+        <div className="container">
             <Button onClick={() => setFormModalVisibility(!formModalVisibility)}>
                 Добавить пост
             </Button>
             <Modal
                 visibility={formModalVisibility}
-                setVisibility={setFormModalVisibility}
-            >
+                setVisibility={setFormModalVisibility}>
                 <PostForm createPost={createPost}/>
             </Modal>
             <hr style={{margin: "5px 0"}}/>
             <PostFilter filter={filter} setFilter={setFilter} sortPosts={sortPosts}/>
             <hr style={{margin: "5px 0"}}/>
-            {((sortedAndSearchedPosts.length === 0 || !sortedAndSearchedPosts) &&
-                ((postsLoading && <Loader/>) || (postsError && <h1>Error</h1>) || (
-                    <h1>Посты не найдены</h1>
-                ))) || (
-                <div>
-                    <PostPagination
-                        page={postsPage}
-                        setPage={setPostsPage}
-                        max={maxPageCount}
-                    />
-                    <PostList
-                        posts={sortedAndSearchedPosts}
-                        removePost={removePost}/>
-                </div>
-            )}
+            <FetchStatus
+                condition={sortedAndSearchedPosts.length === 0 || !sortedAndSearchedPosts}
+                loading={postsLoading}
+                error={postsError}>
+                <PostPagination
+                    page={postsPage}
+                    setPage={setPostsPage}
+                    max={maxPageCount}/>
+                <PostList
+                    posts={sortedAndSearchedPosts}
+                    removePost={removePost}/>
+            </FetchStatus>
         </div>
     );
 };
